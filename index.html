@@ -11,69 +11,72 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Rudy Yu</div>
+            <a href="#home" class="logo">Rudy Yu</a>
+            <button class="mobile-menu-button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-lang-key="home">Home</a></li>
+                <li><a href="#about" data-lang-key="about">About</a></li>
+                <li><a href="#projects" data-lang-key="projects">Projects</a></li>
+                <li><a href="#contact" data-lang-key="contact">Contact</a></li>
             </ul>
+            <div class="language-theme-toggles">
+                <button id="language-toggle-id" class="language-toggle-button active" data-lang-code="id">ID</button>
+                <button id="language-toggle-en" class="language-toggle-button" data-lang-code="en">EN</button>
+                <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Hi, I'm Rudy Yu</h1>
-                <p>Web Developer</p>
-                <p class="subtitle">A passionate developer crafting digital experiences</p>
-                <a href="#projects" class="cta-button">View My Work</a>
-            </div>
             <div class="hero-image">
                 <img src="./images/Rudy Yu Profile Picture.jpg" alt="Rudy Yu Profile Picture" class="profile-picture">
+            </div>
+            <div class="hero-content">
+                <h1 data-lang-key="hero_greeting">Hi, I'm Rudy</h1>
+                <p data-lang-key="hero_role">Fullstack Developer | No-Code Builder | Creative Technologist</p>
+                <p class="subtitle" data-lang-key="hero_subtitle">Building digital solutions with passion and precision</p>
+                <div class="hero-location">
+                    <span data-lang-key="hero_location_text">📍 Indonesia (Remote-friendly)</span>
+                    <span data-lang-key="hero_language_text">🌐 Indonesia, English (basic/intermediate)</span>
+                </div>
+                <a href="#projects" class="cta-button" data-lang-key="hero_cta_button">View My Work</a>
             </div>
         </section>
 
         <section id="about" class="about">
-            <h2>Who am I?</h2>
+            <h2 data-lang-key="about_title">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I am a passionate developer with a strong foundation in web development and a keen eye for creating beautiful, functional, and user-friendly applications. My journey in technology has equipped me with the skills to bring ideas to life through clean and efficient code.</p>
-                    <p>With a focus on modern web technologies and best practices, I strive to create seamless digital experiences that make a difference. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.</p>
-                </div>
+                <p class="about-text" data-lang-key="about_paragraph_1">
+                    I am an independent developer with experience in building various applications and websites, from simple automation tools with AppSheet to fullstack systems using React, Node.js, and Firebase. While most of my projects are personal initiatives driven by passion and technology exploration, they reflect my technical capabilities, initiative, and perseverance in delivering complete solutions from start to finish.
+                </p>
+                <p class="about-text" data-lang-key="about_paragraph_2">
+                    Currently, I am opening myself to professional freelance work and ready to contribute to real projects with the best quality. Although I haven't had direct clients yet, I approach every project with professional standards as if they were commercial projects. I am ready to give my best for any future collaborations.
+                </p>
                 <div class="skills">
-                    <h3>Skills</h3>
+                    <h3 data-lang-key="skills_title">Core Skills</h3>
                     <div class="skill-categories">
                         <div class="skill-category">
-                            <h4>Frontend</h4>
-                            <div class="skill-tags">
-                                <span>React</span>
-                                <span>Next.js</span>
-                                <span>TypeScript</span>
-                                <span>Tailwind CSS</span>
-                                <span>HTML/CSS</span>
-                            </div>
+                            <h4 data-lang-key="skill_category_fullstack">Fullstack Development</h4>
+                            <ul class="skill-list" id="frontend-skills">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
                         </div>
                         <div class="skill-category">
-                            <h4>Backend</h4>
-                            <div class="skill-tags">
-                                <span>Node.js</span>
-                                <span>Express</span>
-                                <span>MongoDB</span>
-                                <span>SQL</span>
-                                <span>Python</span>
-                                <span>REST APIs</span>
-                            </div>
+                            <h4 data-lang-key="skill_category_backend">Backend & Database</h4>
+                            <ul class="skill-list" id="backend-skills">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
                         </div>
                         <div class="skill-category">
-                            <h4>Tools</h4>
-                            <div class="skill-tags">
-                                <span>Git</span>
-                                <span>AppSheet</span>
-                                <span>Joomla</span>
-                                <span>CI/CD</span>
-                                <span>Testing</span>
-                            </div>
+                            <h4 data-lang-key="skill_category_tools">Tools & Automation</h4>
+                            <ul class="skill-list" id="tools-skills">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -81,60 +84,47 @@
         </section>
 
         <section id="projects" class="projects">
-            <h2>My Projects</h2>
-            <div class="project-grid" id="projectGrid">
-                <!-- Projects will be loaded from data.json -->
+            <h2 data-lang-key="projects_title">My Projects</h2>
+            <div class="project-grid" id="project-grid">
+                <!-- Projects will be loaded here -->
             </div>
         </section>
 
         <section id="contact" class="contact">
-            <h2>Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:rudyyu1984@gmail.com">rudyyu1984@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+6285260881985">+62 852 6088 1985</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Indonesia</span>
-                    </div>
+            <h2 data-lang-key="contact_title">Get in Touch</h2>
+            <p class="contact-description" data-lang-key="contact_description">I'm open to freelance remote projects and collaborations. Let's create something amazing together!</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:rudyyu1984@gmail.com" data-lang-key="contact_email">rudyyu1984@gmail.com</a>
                 </div>
-                <form id="contactForm" action="https://formspree.io/f/xkgbjwkr" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="whatsapp">WhatsApp Number</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+62 812-3456-7890">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-                <div class="social-links">
-                    <a href="https://github.com/Rudy_Yu" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/Rudy Yu" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-lang-key="contact_location">Indonesia (Remote-friendly)</span>
                 </div>
             </div>
+
+            <form id="contact-form" action="https://formspree.io/f/your_unique_form_id" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required data-lang-placeholder-key="form_name_placeholder">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required data-lang-placeholder-key="form_email_placeholder">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="+62 812-3456-7890" data-lang-placeholder-key="form_whatsapp_placeholder">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" required data-lang-placeholder-key="form_message_placeholder"></textarea>
+                </div>
+                <button type="submit" class="submit-button" data-lang-key="form_submit_button">Send Message</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Rudy Yu. All rights reserved.</p>
+        <p data-lang-key="footer_text">&copy; 2024 Rudy Yu. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
