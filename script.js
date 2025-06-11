@@ -89,6 +89,21 @@ const projectData = [
             title_id: "Aplikasi Absensi Sederhana",
             description_id: "Aplikasi sederhana untuk melacak kehadiran peserta kelas yang dibangun dengan Apssheet dan google sheet."
         }
+    },
+    {
+        title: "Rental Companion",
+        description: "Web application for renting companions with various services such as chat, phone calls, video calls, and offline dates.",
+        image: "./images/Webnovel.png",
+        technologies: ["React", "Node.js", "MongoDB", "WebRTC"],
+        demoLink: "#",
+        githubLink: "#",
+        status: "Development",
+        lang_keys: {
+            title_en: "Rental Companion",
+            description_en: "Web application for renting companions with various services such as chat, phone calls, video calls, and offline dates.",
+            title_id: "Rental Companion",
+            description_id: "Aplikasi web untuk menyewa pendamping dengan berbagai layanan seperti chat, panggilan telepon, panggilan video, dan kencan offline."
+        }
     }
 ];
 
@@ -424,6 +439,26 @@ function setupMobileMenu() {
     }
 }
 
+// Back to top button functionality
+function setupBackToTop() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Load translations from data.json
 fetch('data.json')
     .then(response => response.json())
@@ -447,6 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSkills();
     handleScrollAnimations();
     setupMobileMenu(); // Setup mobile menu after buttons are in place
+    setupBackToTop(); // Setup back to top button
 
     // Language toggle event listeners
     document.getElementById('language-toggle-id').addEventListener('click', () => setLanguage('id'));

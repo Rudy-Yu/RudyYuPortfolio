@@ -889,3 +889,233 @@ footer {
         padding: 1rem 0.8rem;
     }
 }
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-image-container {
+        width: 100%;
+        height: 200px;
+    }
+
+    .project-info {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .tech-stack {
+        flex-wrap: wrap;
+    }
+
+    .tech-tag {
+        margin: 5px;
+    }
+
+    .skill-item {
+        width: 100%;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links {
+        padding: 10px;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .project-card {
+        margin: 10px 0;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-links a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Fix for mobile menu */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+}
+
+/* Fix for project grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Fix for skill bars */
+.skill-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Fix for contact form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Fix for theme toggle and language buttons */
+.theme-toggle,
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .theme-toggle,
+    .language-toggle {
+        top: 10px;
+        right: 10px;
+    }
+}
