@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rudy Yu - Fullstack Developer & No-Code Builder Portfolio">
+    <meta name="keywords" content="web developer, fullstack, no-code, portfolio, Indonesia">
+    <title>Rudy Yu - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo"><img src="./images/logo.png" alt="Rudy Yu Logo"></a>
+            <button class="mobile-menu-button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" data-lang-key="home">Beranda</a></li>
+                <li><a href="#about" data-lang-key="about">Tentang</a></li>
+                <li><a href="#projects" data-lang-key="projects">Proyek</a></li>
+            </ul>
+            <div class="language-theme-toggles">
+                <button id="language-toggle-id" class="language-toggle-button active" data-lang-code="id">ID</button>
+                <button id="language-toggle-en" class="language-toggle-button" data-lang-code="en">EN</button>
+                <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-image fade-in">
+                <img src="./images/Rudy Yu Profile Picture.jpg" alt="Rudy Yu" class="profile-picture">
+            </div>
+            <div class="hero-content fade-in">
+                <h1 data-lang-key="hero_greeting">Halo, saya Rudy</h1>
+                <p data-lang-key="hero_role">Pengembang Fullstack | Pembangun No-Code | Teknolog Kreatif</p>
+                <p class="subtitle" data-lang-key="hero_subtitle">Membangun solusi digital dengan semangat dan presisi</p>
+                <div class="hero-location">
+                    <span data-lang-key="hero_location_text">📍 Indonesia (Bersedia Remote)</span>
+                    <span data-lang-key="hero_language_text">🌐 Indonesia, Inggris (dasar/menengah)</span>
+                </div>
+                <a href="#projects" class="cta-button" data-lang-key="hero_cta_button">Lihat Karya Saya</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title" data-lang-key="about_title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-lang-key="about_paragraph_1">Saya adalah seorang pengembang web yang antusias dalam membangun solusi lengkap—mulai dari konsep hingga siap diluncurkan. Meskipun saya baru memulai perjalanan sebagai freelancer, saya memiliki pengalaman langsung dalam membuat alat otomatisasi menggunakan AppSheet, aplikasi web berbasis React, serta sistem fullstack dengan Node.js dan Firebase. Semua berawal dari proyek pribadi, namun kini telah saya sempurnakan dengan standar kualitas yang siap untuk klien.</p>
+                    <p data-lang-key="about_paragraph_2">Yang membedakan saya adalah pendekatan kerja saya: saya menerapkan standar profesional dalam setiap proyek, fokus pada pemecahan masalah yang praktis, serta menulis kode yang bersih dan mudah dirawat. Saya menikmati proses menciptakan alat yang benar-benar berguna—baik untuk pengguna maupun kebutuhan bisnis. Mari bekerja sama untuk mewujudkan visi Anda menjadi solusi digital yang benar-benar bernilai. Siap mendiskusikan proyek Anda? Ayo wujudkan ide Anda menjadi kenyataan.</p>
+                </div>
+                <div class="skills">
+                    <h3 data-lang-key="skills_title">Keahlian Inti</h3>
+                    <div class="skill-categories">
+                        <div class="skill-category">
+                            <h4 data-lang-key="skill_category_fullstack">Pengembangan Fullstack</h4>
+                            <div id="frontend-skills" class="skill-list"></div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-lang-key="skill_category_backend">Backend & Database</h4>
+                            <div id="backend-skills" class="skill-list"></div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-lang-key="skill_category_tools">Alat & Otomatisasi</h4>
+                            <div id="tools-skills" class="skill-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title" data-lang-key="projects_title">My Projects</h2>
+            <div id="project-grid" class="project-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer_text">© 2024 Rudy Yu. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
