@@ -1,18 +1,18 @@
 // Project data
 const projectData = [
     {
-        title: "Digital Invitation System",
-        description: "A professional digital invitation platform built with Next.js and Firebase. Features include customizable templates, RSVP management, and real-time guest tracking. Perfect for event organizers and wedding planners.",
+        title: "ZUVANA Digital Invitation App",
+        description: "An exclusive platform designed to invite potential contributors to ZUVANA projects. Features include unique tokens, identity validation, digital NDA, personal watermark, and activity logging.",
         image: "./images/Zuvana Invitation.png",
         technologies: ["Next.js", "Tailwind", "Firebase"],
         demoLink: "#",
-        githubLink: "#",
+        githubLink: "https://github.com/Rudy-Yu/zuvana-invitation-app.git",
         status: "Development",
         lang_keys: {
-            title_en: "Digital Invitation System",
-            description_en: "A professional digital invitation platform built with Next.js and Firebase. Features include customizable templates, RSVP management, and real-time guest tracking. Perfect for event organizers and wedding planners.",
-            title_id: "Sistem Undangan Digital",
-            description_id: "Platform undangan digital profesional yang dibangun dengan Next.js dan Firebase. Fitur meliputi template yang dapat disesuaikan, manajemen RSVP, dan pelacakan tamu secara real-time. Cocok untuk penyelenggara acara dan perencana pernikahan."
+            title_en: "ZUVANA Digital Invitation App",
+            description_en: "An exclusive platform designed to invite potential contributors to ZUVANA projects. Features include unique tokens, identity validation, digital NDA, personal watermark, and activity logging.",
+            title_id: "Aplikasi Undangan Digital ZUVANA",
+            description_id: "Platform eksklusif yang dirancang untuk mengundang kontributor potensial ke proyek ZUVANA. Fitur meliputi token unik, validasi identitas, NDA digital, watermark pribadi, dan pencatatan aktivitas."
         }
     },
     {
@@ -94,7 +94,10 @@ const projectData = [
         title: "Rental Companion",
         description: "Web application for renting companions with various services such as chat, phone calls, video calls, and offline dates.",
         image: "./images/Webnovel.png",
-        technologies: ["React", "Node.js", "MongoDB", "WebRTC"],
+        technologies: [
+            "React.js", "Vite", "Tailwind CSS", "React Router", "Axios",
+            "Python", "Flask", "SQLAlchemy", "JWT", "MySQL"
+        ],
         demoLink: "#",
         githubLink: "#",
         status: "Development",
